@@ -6,7 +6,7 @@
 
    #### Importing Github Repository
 1.  log in to your github account
-2.  got to the repository you want to import
+2.  go to the repository you want to import
 3.  at top right hand coner, dropdown nest to the + sign, and click on the import repository
 4.  Copy the repository url you want to import, and paste where its ask for old url
 5.  Give the repository name, and Begin import
@@ -42,16 +42,16 @@ After launching this Jenkins server, attach a tag as Key=Application, value=jenk
 3. Scroll down to the scrpt section, go and copy the Jenkins file and paste it here
 
 ####  Create IAM Role
-goto IAM, select Role, create role, select aws Sevice, for use cace select EC2 next add permission select Adminstrator Access
-Name = Jenkins-cicd-Admin-Role, then create.
+goto IAM, select Role, create role, select aws Sevice, for use cace select EC2
 Now attache this role to Jenkins server
 Select the running Jenkins server, click on action, click on security and modify IAM role, select the the role created from the dropdown and update.
 
-#  Payload Url:
+#  Payload Url:for webkook
     http://18.191.29.20:8080/github-webhook/
 Refresh to see a check mark: meaning ur jenkins is reachable
 
-click on the code and copy the url on ur github repository and go to the jenkins console click on the pipeline and configure, select the github project under General and paste the url there, then scroll down to Build Triger section select Github hook trigger for GITScm polling
+click on the code and copy the url on ur github repository and go to the jenkins console click on the pipeline and configure, select the github project under General and paste the url there, then scroll down to Build T next add permission select Adminstrator Access
+Name = Jenkins-cicd-Admin-Role, then create.riger section select Github hook trigger for GITScm polling
 
 #####   To destroy the jenkins server:
 log in to ur Jenkins server, cd to /var/lib/jenkins/workspace/app-infra-pipeline, do ls you will see the terraform state files. then Run terraform destroy --auto-approve  from here.
