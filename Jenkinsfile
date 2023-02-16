@@ -80,8 +80,7 @@ pipeline {
             steps {
                 echo 'Terraform apply...'
                 sh 'sudo terraform apply --auto-approve'
-               
-               
+                          
             }
         }
         

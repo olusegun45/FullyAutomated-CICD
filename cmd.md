@@ -54,5 +54,5 @@ click on the code and copy the url on ur github repository and go to the jenkins
 Name = Jenkins-cicd-Admin-Role, then create.riger section select Github hook trigger for GITScm polling
 
 #####   To destroy the jenkins server:
-log in to ur Jenkins server, cd to /var/lib/jenkins/workspace/app-infra-pipeline, do ls you will see the terraform state files. then Run terraform destroy --auto-approve  from here.
+log in to ur Jenkins server, cd /var/lib/jenkins/workspace/app-infra-pipeline, do ls you will see the terraform state files. then Run sudo terraform destroy --auto-approve  from here.
 
