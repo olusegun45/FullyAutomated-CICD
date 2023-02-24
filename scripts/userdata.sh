@@ -33,3 +33,18 @@ sudo systemctl daemon-reload
 sudo systemctl enable node-exporter
 sudo systemctl start node-exporter
 sudo systemctl status node-exporter
+
+# docker installations
+#!/bin/bash
+# Install Docker dependencies
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# Add Docker repository to Yum
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# Install Docker
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+# Enable and start Docker service
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+
+# Add the current user to the docker group
+# sudo usermod -aG docker $USER

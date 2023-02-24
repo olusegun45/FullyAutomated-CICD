@@ -56,3 +56,5 @@ sudo yum install awslogs -y
 sudo sed -i "s/.*file = \/var\/log\/messages/file = \/var\/log\/httpd\/access_log/g" /etc/awslogs/awslogs.conf
 sudo service awslogsd start
 sudo systemctl  enable awslogsd
+
+# docker installations
