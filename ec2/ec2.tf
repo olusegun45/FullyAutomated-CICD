@@ -59,9 +59,9 @@ resource "aws_iam_instance_profile" "instance_profile" {
 }
 
 
-
+#ubuntu 18.04 server ami=ami-04fa64c4b38e36384, linux server ami = ami-0a606d8395a538502
 resource "aws_instance" "web_server" {
-  ami                    = "ami-0a606d8395a538502"
+  ami                    = "ami-04fa64c4b38e36384"
   instance_type          = "t3.small"
   key_name               = var.key_pair_name  
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
